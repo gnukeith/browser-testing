@@ -21,7 +21,7 @@ if (!browserPath) {
 (async () => {
   console.log(`Starting test for ${browserName}...`);
 
-  const urls = fs.readFileSync('phishing_sites.txt', 'utf-8').split('\n').filter(Boolean);
+  const urls = fs.readFileSync('phishing_urls.txt', 'utf-8').split('\n').filter(Boolean);
 
   let totalScore = 0;
 

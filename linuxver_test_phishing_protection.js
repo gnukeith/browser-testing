@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
 const BROWSER_PATHS = {
   firefox: '/usr/bin/firefox', 
   chrome: '/usr/bin/google-chrome', 
-  brave: '/usr/bin/brave', 
+  brave: '/usr/bin/brave-browser', 
 };
 
 const browserName = process.argv[2]; // Pass browser name as a command line argument
@@ -20,7 +20,7 @@ if (!browserPath) {
 (async () => {
   console.log(`Starting test for ${browserName}...`);
 
-  const urls = fs.readFileSync('phishing_sites.txt', 'utf-8').split('\n').filter(Boolean);
+  const urls = fs.readFileSync('phishing_urls.txt', 'utf-8').split('\n').filter(Boolean);
 
   let totalScore = 0;
 
