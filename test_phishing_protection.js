@@ -39,6 +39,7 @@ if (!browserPath) {
 
       const pageContent = await page.content();
 
+      // Scoring logic
       if (pageContent.includes('Deceptive site ahead') || pageContent.includes('Phishing site warning')) {
         totalScore += 0.5;
         console.log(`Warning detected for URL: ${url}`);
