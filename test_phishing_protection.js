@@ -1,6 +1,8 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
+
+// you will have to download the browser you want to test and provide the path to the executable file
 const BROWSER_PATHS = {
   edge: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
   brave: 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe',
@@ -12,7 +14,7 @@ const browserName = process.argv[2]; // Pass browser name as a command line argu
 const browserPath = BROWSER_PATHS[browserName];
 
 if (!browserPath) {
-  console.error('Unsupported browser. Supported browsers are: edge, brave, opera, avast, firefox');
+  console.error('Unsupported browser. Supported browsers are: edge, brave, avast, chrome.');
   process.exit(1);
 }
 
